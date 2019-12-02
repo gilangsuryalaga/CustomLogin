@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_monster"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/fat_round_monster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:text="Monster World"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_monster" />
+    <TextView
+        android:id="@+id/beta_login"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/slogan"
+        app:layout_constraintTop_toBottomOf="@id/logo_monster"
+        android:text="BETA"/>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/slogan">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/envelope"/>
+
+            <EditText
+                android:id="@+id/email_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:hint="Tell Us Your Email"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/lock"/>
+
+            <EditText
+                android:id="@+id/pass_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:inputType="textPassword"
+                android:fontFamily="casual"
+                android:hint="Tell Us Your Password"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/customedittxt"
+            />
+<!--        <com.spark.submitbutton.SubmitButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:textSize="20dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text="Login"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/colorSecondary"-->
+<!--            app:sub_btn_background="@android:color/white"-->
+<!--            app:sub_btn_duration="2000"-->
+<!--            app:sub_btn_line_color="@color/colorPrimaryDark"-->
+<!--            app:sub_btn_ripple_color="@color/colorPrimary"-->
+<!--            app:sub_btn_tick_color="@color/white"/>-->
+        <TextView
+            android:id="@+id/regis_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold|italic"
+            android:text="@string/register_now"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
